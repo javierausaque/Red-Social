@@ -16,7 +16,7 @@ export const routes: Routes = [
     },
     {
         path: '',
-        canActivate: [tokenGuard],
+      //TODO  canActivate: [tokenGuard],
         component: HomeComponent
     }
 ];
