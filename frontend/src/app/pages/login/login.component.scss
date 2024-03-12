@@ -1,0 +1,38 @@
+mat-card {
+    padding: 2em;
+    margin: 2em;
+}
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+    width: 60vh;
+}
+
+.form-field{
+    width: 100%;
+
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-card-actions{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-login {
+    width: 45%;
+}
+
+.btn-register {
+    margin-left: 3%;
+    width: 45%;
+}

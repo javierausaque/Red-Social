@@ -1,0 +1,21 @@
+ <h2>Posts</h2>
+@for (item of data; track $index) {
+
+<mat-card >
+    <mat-card-header>
+        <mat-card-title-group>
+            <mat-card-title>{{item.title }}</mat-card-title>
+            <mat-card-subtitle> {{ item.userId.fullName }} </mat-card-subtitle>
+            <mat-icon [matBadge]="item.likes" matBadgeColor="primary" (click)="addPost(item)">favorite</mat-icon>
+           </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{item.content}}</p>
+    </mat-card-content>
+    <mat-card-footer>
+        {{ item.createdAt | date: 'medium' }}
+    </mat-card-footer>
+  </mat-card>
+<br>
+
+}

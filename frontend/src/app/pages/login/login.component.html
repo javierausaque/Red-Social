@@ -1,0 +1,42 @@
+<div class="container">
+
+    <div class="form">
+
+
+        <mat-card>
+            <mat-card-title>
+                Login Red Social
+            </mat-card-title>
+
+            <mat-card-content>
+
+                <form [formGroup]="formLogin">
+                    <div class="form-field">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Username</mat-label>
+                            <input matInput placeholder="Username" id="username" type="text" formControlName="username">
+                            <mat-icon matSuffix>person</mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="form-field">
+                        <mat-form-field>
+                            <mat-label>Password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                </form>
+
+            </mat-card-content>
+
+            <mat-card-actions>
+                <button class="btn-login" [disabled]="formLogin.invalid" mat-raised-button color="primary" (click)="login()">Ingresar</button>
+                <button class="btn-register" mat-raised-button color="warn" (click)="register()">Registrar</button>
+            </mat-card-actions>
+
+        </mat-card>
+    </div>
+</div>

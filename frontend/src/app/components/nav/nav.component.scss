@@ -1,0 +1,59 @@
+.container {
+    width: 250px;
+    height: 80vh;
+}
+
+.sidenav-content {
+    margin: 4vh;
+    height: 98vh;
+    width: 92%;
+}
+
+.sidenav {
+    padding: 3vh;
+}
+
+.container-menu {
+    padding: 3vh;
+    margin: 1px;
+}
+
+mat-drawer-container {
+    display: contents;
+}
+
+
+.actions {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 20vh;
+    z-index: 0;
+}
+
+.item-actions {
+    margin: 1vh;
+    display: flex;
+}
+
+.btn-actions {
+    width: 220px !important;
+}
+
+.container-img {
+    align-items: center;
+}
+
+.container-info {
+    height: 75%;
+}
+
+img {
+    width: 90%;
+    margin: 1vh;
+}

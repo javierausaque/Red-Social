@@ -1,0 +1,14 @@
+<div class="container-search">
+    <div class="col">
+        <mat-form-field appearance="outline" floatLabel="always">
+            <mat-label>Buscar</mat-label>
+            <input matInput placeholder="Buscar" id="search" type="text" [(ngModel)]="searchControl"
+                (keydown.enter)="search()">
+            <mat-icon (click)="search()" matSuffix>search</mat-icon>
+            @if (searchControl != '') {
+            <mat-icon (click)="resetInput()" matTextPrefix>close</mat-icon>
+            }
+        </mat-form-field>
+        <button class="btn-search" (click)="addPost()" mat-stroked-button color="primary"> Agregar Post </button>
+    </div>
+</div>

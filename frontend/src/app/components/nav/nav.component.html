@@ -1,0 +1,53 @@
+<mat-drawer-container class="container">
+
+    <mat-drawer class="container-menu" #drawer class="sidenav" mode="side" [opened]="true">
+
+        <div class="container-info">
+            <div class="container-img">
+                <img
+                    src="https://imgs.search.brave.com/afgaCSLVRdpQ5ubEt9T3xyhdNRWZL1qw8LaTyJc2TpE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudGhlbm91bnBy/b2plY3QuY29tL3Bu/Zy82MjI0MzI4LTIw/MC5wbmc" />
+
+                <br>
+
+                <h2>
+                    {{ user.fullName  }}
+                </h2>
+                <h3>
+                    Edad: {{ user.age}}
+                </h3>
+            </div>
+            <div class="actions">
+                <div class="item-actions">
+                    <button class="btn-actions" mat-stroked-button>Mis datos</button>
+                </div>
+                <div class="item-actions">
+                    <button class="btn-actions" (click)="logout()" mat-stroked-button>Cerrar sesión</button>
+                </div>
+            </div>
+        </div>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        <div class="row">
+            <div class="col">
+                <button mat-mini-fab color="primary" (click)="drawer.toggle()"
+                    [matTooltip]="drawer.opened ? 'Ocultar Menú':'Ver Menú'">
+                    <mat-icon>menu</mat-icon>
+                </button>
+              <b style="font-size: 20px;">  Red social </b>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <app-search></app-search>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <app-post></app-post>
+            </div>
+        </div>
+    </div>
+
+</mat-drawer-container>
